@@ -1,0 +1,68 @@
+.App {
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 90vh;
+  margin: auto;
+  padding: 20px;
+  border: 1px #9e9494 solid;
+  box-shadow: 2px 2px #dad5d5, -2px -1px #dad5d5;
+}
+
+.input-form {
+  display: flex;
+}
+
+.input-primary {
+  width: 100%;
+  height: 40px; 
+  padding: 15px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: black;
+  width: 100px;
+  height: 40px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #8a8787;
+}
+
+.filter-group {
+  display: flex;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.filter-list {
+  width: 100%;
+}
+
+.filter-btn {
+  width: 100%;
+  height: 30px;
+  background-color: #dad5d5,;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border: 1px black solid;
+}
+
+.active {
+  border: 1px black solid;
+}
+
+ul {
+  padding: 0;
+}
+
+
+
+
+
+

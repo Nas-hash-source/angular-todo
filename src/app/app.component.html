@@ -1,0 +1,25 @@
+<div class="App">
+  <h1>To Do App</h1>
+
+  <form class="input-form">
+    <input type="text" class="input-primary" placeholder="Enter your task..." #newInput>
+    <button class="btn-primary" (click)="addToDo($event, newInput.value); newInput.value=''">Add</button>
+  </form>
+
+  <ul class="filter-group">
+    <li *ngFor="let filterOption of filterList" class="filter-list">
+      <button 
+        class="filter-btn"
+        [class.active]="filter === filterOption"
+        (click)="filter=filterOption"
+      >
+        {{filterOption}}
+      </button>
+    </li>
+  </ul>
+
+  <ul>
+    <todo-item *ngFor="let item of filteredList" [item]="item" (remove)="removeToDo(item.id)"></todo-item>
+  </ul>
+
+</div>

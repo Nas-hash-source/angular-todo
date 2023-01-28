@@ -1,0 +1,54 @@
+<li *ngIf="editable" class="todo">
+    <form class="form" (submit)="saveItem($event, newValue.value)">
+        <input
+            class="update"
+            type="text"
+            autoComplete= "off"
+            [value]="item.task"
+            #newValue
+        />
+    </form>
+    <div class="btn-wrapper">
+        <button 
+            class="btn save"
+            (click)="saveItem($event, newValue.value)"
+        >
+            Save
+        </button>
+        <button 
+            class="btn"
+            (click)="editable=false"
+        >
+            Cancel
+        </button>
+    </div>
+</li>
+
+
+<!--Here is the template when not editable-->
+<li *ngIf="!editable" class="todo">
+    <form class="form">
+        <input
+            class="checkbox"
+            type="checkbox"
+            id="item.id"
+            [checked]="item.isComplete"
+            (change)="item.isComplete = !item.isComplete"
+        />
+        <label class="label" for="item.id">{{item.task}}</label>
+    </form>
+    <div class= "btn-wrapper">
+        <button 
+            class="btn"
+            (click)="editable=true"
+        >
+            Edit
+        </button>
+        <button 
+            class="btn delete"
+            (click)="remove.emit()"
+        >
+            Delete
+        </button>
+    </div>
+</li>
