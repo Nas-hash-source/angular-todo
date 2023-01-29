@@ -37,13 +37,14 @@
 }
 
 .filter-list {
+  list-style-type: none;
   width: 100%;
 }
 
 .filter-btn {
   width: 100%;
   height: 30px;
-  background-color: #dad5d5,;
+  background-color: #dad5d5;
   border: none;
   padding: 0;
   cursor: pointer;
